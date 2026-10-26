@@ -4,7 +4,7 @@
     <td>@GroceryItem.Name</td>
     <td>@GroceryItem.Price</td>
     <td>
-        <button class="btn-sm float-right" onclick="AddPrice">
+        <button class="btn-sm float-right" @onclick="AddPrice">
             + Add 100
         </button>
     </td>
@@ -20,5 +20,6 @@
     private async Task AddPrice()
     {
         GroceryItem.Price += 100;
+        await OnGroceryPriceIncreased.InvokeAsync();
     }
 }
