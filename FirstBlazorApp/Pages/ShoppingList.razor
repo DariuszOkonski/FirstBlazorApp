@@ -1,4 +1,5 @@
 ﻿@page "/shoppinglist"
+@layout ShoppingListLayout
 
 @using FirstBlazorApp.Data
 
@@ -19,12 +20,14 @@
             <InputText @bind-Value="grocery.Name" />
         </label>
     </p>
-    <p>
+
+    @* <p>
         <label>
             Price:
-            @* <InputText @bind-Value="grocery.Price" /> *@
+            <InputText @bind-Value="grocery.Price" />
         </label>
-    </p>
+    </p> *@
+
     <button type="submit">Add Grocery</button>
 </EditForm>
 
